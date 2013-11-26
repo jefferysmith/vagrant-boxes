@@ -13,7 +13,7 @@ yum -y update
 echo "downloading and installing the JDK..."
 # download the jdk rpm 
 mkdir /tmp/downloads
-wget --no-verbose --output-document=/tmp/downloads/jdk.rpm --no-check-certificate --no-cookies --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com" "http://download.oracle.com/otn-pub/java/jdk/7u40-b43/jdk-7u40-linux-x64.rpm"
+wget --no-verbose --output-document=/tmp/downloads/jdk.rpm --no-check-certificate --no-cookies --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com" "http://download.oracle.com/otn-pub/java/jdk/7u45-b18/jdk-7u45-linux-x64.rpm"
 # install the package
 rpm -Uvh /tmp/downloads/jdk.rpm
 # set as system default
@@ -42,4 +42,4 @@ chown vagrant:vagrant /home/vagrant/.gvm/etc/config
 # Install Grails
 ################
 echo "downloading and installing Grails"
-sudo -i -H -u vagrant gvm install grails 2.3.0
+sudo -i -H -u vagrant gvm install grails 2.3.3
