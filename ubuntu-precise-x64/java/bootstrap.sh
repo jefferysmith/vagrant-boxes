@@ -23,3 +23,17 @@ echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /u
 apt-get -y install oracle-java7-installer
 # set the java environment variables
 apt-get install oracle-java7-set-default
+
+
+# install maven (for precise this is maven 3.0.4)
+apt-get -y install maven
+
+
+# try something like this if we need the latest version
+#wget --no-verbose --directory-prefix=/tmp http://apache.mirror.iweb.ca/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz
+#mkdir /usr/local/apache-maven
+#tar -xzvf /tmp/apache-maven-3.1.1-bin.tar.gz -C /usr/local/apache-maven/
+#echo "export M2_HOME=/usr/local/apache-maven/apache-maven-3.1.1" >> ~/.bashrc
+#echo "export M2=/usr/local/apache-maven/apache-maven-3.1.1/bin" >> ~/.bashrc
+#echo "export PATH=/usr/local/apache-maven/apache-maven-3.1.1/bin:$PATH" >> ~/.bashrc
+# http://lasindu.com/installing-maven3-in-ubuntu-12-04/
