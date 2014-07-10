@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# This script is executed by the Vagrant shell provisioner which runs 
+# This script is executed by the Vagrant shell provisioner which runs
 # as the root user.
 
 # Add the latest updates to installed software
@@ -11,9 +11,9 @@ yum -y update
 # Install oracle jdk
 ####################
 echo "downloading and installing the JDK..."
-# download the jdk rpm 
+# download the jdk rpm
 mkdir /tmp/downloads
-wget --no-verbose --output-document=/tmp/downloads/jdk.rpm --no-check-certificate --no-cookies --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com" "http://download.oracle.com/otn-pub/java/jdk/7u45-b18/jdk-7u45-linux-x64.rpm"
+wget --no-verbose --output-document=/tmp/downloads/jdk.rpm --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jdk-7u60-linux-x64.rpm"
 # install the package
 rpm -Uvh /tmp/downloads/jdk.rpm
 # set as system default
